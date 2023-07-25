@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.MainActivity">
+
+    <TextView
+        android:id="@+id/maxTempText"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/feelTempText"
+        app:layout_constraintEnd_toEndOf="@+id/feelTempText" />
+
+    <TextView
+        android:id="@+id/feelTempText"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/minTempText"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/maxTempText"
+        app:layout_constraintEnd_toEndOf="@+id/maxTempText" />
+
+    <TextView
+        android:id="@+id/windSpeedText"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="80dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/windImage"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText" />
+
+    <TextView
+        android:id="@+id/tempMinText"
+        android:layout_width="108dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:text="Minimum:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tempMaxText"
+        app:layout_constraintEnd_toStartOf="@+id/minTempText"
+        app:layout_constraintStart_toStartOf="@+id/tempFeelText" />
+
+    <TextView
+        android:id="@+id/tempMaxText"
+        android:layout_width="108dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:text="Maximum:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tempFeelText"
+        app:layout_constraintStart_toStartOf="@+id/tempFeelText" />
+
+    <TextView
+        android:id="@+id/tempFeelText"
+        android:layout_width="108dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:text="Feels Like:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/feelTempText" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="75dp"
+        android:hint="City Name"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dereceText"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/enlemText"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:text="Latitude:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/boylamText"
+        app:layout_constraintStart_toStartOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/boylamDegerText"
+        android:layout_width="53dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/boylamText" />
+
+    <TextView
+        android:id="@+id/cityText"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/enlemText"
+        app:layout_constraintStart_toStartOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/pressureText"
+        android:layout_width="72dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Pressure:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText" />
+
+    <TextView
+        android:id="@+id/hummidityText"
+        android:layout_width="72dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Hummidity"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pressureText" />
+
+    <TextView
+        android:id="@+id/pressureValueText"
+        android:layout_width="35dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="10dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/pressureText"
+        app:layout_constraintTop_toTopOf="@+id/pressureText" />
+
+    <TextView
+        android:id="@+id/hummidityValueText"
+        android:layout_width="35dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="10dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hummidityText"
+        app:layout_constraintStart_toEndOf="@+id/hummidityText" />
+
+    <TextView
+        android:id="@+id/countryText"
+        android:layout_width="53dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/enlemText"
+        app:layout_constraintStart_toEndOf="@+id/cityText"
+        app:layout_constraintTop_toTopOf="@+id/cityText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/enlemDegerText"
+        android:layout_width="53dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/boylamDegerText"
+        app:layout_constraintStart_toEndOf="@+id/enlemText" />
+
+    <TextView
+        android:id="@+id/boylamText"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:text="Longitude:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editText" />
+
+    <ImageView
+        android:id="@+id/havaDurumuIcon"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="25dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/dereceText"
+        app:layout_constraintEnd_toEndOf="@+id/dereceText"
+        app:layout_constraintStart_toStartOf="@+id/dereceText"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="200dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/havaDurumuIcon"
+        app:layout_constraintStart_toStartOf="@+id/havaDurumuIcon"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/search" />
+
+    <ImageView
+        android:id="@+id/windImage"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText"
+        app:srcCompat="@drawable/wind" />
+
+    <TextView
+        android:id="@+id/celciustButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:onClick="celcius"
+        android:text="C°"
+        android:textSize="30sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/dereceText"
+        app:layout_constraintTop_toBottomOf="@+id/dereceText" />
+
+    <TextView
+        android:id="@+id/fahrenheitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="35dp"
+        android:clickable="true"
+        android:onClick="fahrenheit"
+        android:text="F°"
+        android:textSize="30sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/dereceText"
+        app:layout_constraintTop_toBottomOf="@+id/dereceText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
